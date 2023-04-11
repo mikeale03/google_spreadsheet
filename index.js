@@ -65,9 +65,9 @@ async function authorize() {
   return client;
 }
 
-/** https://docs.google.com/spreadsheets/d/11xfnHcfjM9KpbxPJPmH1vhvd1fAd_n10ioQSqYLwZQ4/edit?usp=sharing
- * Prints the names and majors of students in a sample spreadsheet:
- * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+/** 
+ * 
+ * @see https://docs.google.com/spreadsheets/d/11xfnHcfjM9KpbxPJPmH1vhvd1fAd_n10ioQSqYLwZQ4/edit?usp=sharing
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
 async function listMajors(auth) {
@@ -93,7 +93,7 @@ async function listMajors(auth) {
   }
   
   rows.forEach((row) => {
-    // Print columns A and E, which correspond to indices 0 and 4.
+    // Print columns A to E
     console.log(`${row[0]}, ${row[1]}, ${row[2]}, ${row[3]}, ${row[4]}`);
   });
 }
